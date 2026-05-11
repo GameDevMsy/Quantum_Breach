@@ -15,29 +15,29 @@
         .container { max-width: 1200px; margin: 0 auto; }
         
         header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
-        h1 { margin: 0; font-size: 26px; color: var(--accent-blue); font-weight: 900; letter-spacing: -1px; display: flex; align-items: center; gap: 10px; }
+        h1 { margin: 0; font-size: 26px; color: var(--accent-blue); font-weight: 400; letter-spacing: -1px; display: flex; align-items: center; gap: 10px; }
         h1::before { content: ''; display: block; width: 12px; height: 12px; background: var(--accent-blue); box-shadow: 0 0 15px var(--accent-blue); border-radius: 2px; }
 
         .stack { display: flex; flex-direction: column; gap: 20px; }
         .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
 
-        h2 { font-size: 14px; margin: 0 0 20px 0; color: var(--accent-blue); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+        h2 { font-size: 14px; margin: 0 0 20px 0; color: var(--accent-blue); text-transform: uppercase; display: flex; align-items: center; gap: 8px; font-weight: 400; }
         h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
         .table-wrapper { width: 100%; overflow-x: auto; max-height: 400px; border-radius: 8px; border: 1px solid var(--border); background: #0d1117; }
         table { width: 100%; border-collapse: collapse; font-size: 12px; }
-        th { color: var(--text-dim); padding: 12px; border-bottom: 1px solid var(--border); background: #161b22; position: sticky; top: 0; text-align: center; }
+        th { color: var(--text-dim); padding: 12px; border-bottom: 1px solid var(--border); background: #161b22; position: sticky; top: 0; text-align: center; font-weight: 400; }
         td { padding: 10px; border-bottom: 1px solid #21262d; text-align: center; }
 
         input, select { 
             background: #0d1117; border: 1px solid var(--border); color: var(--accent-purple); 
             padding: 6px; border-radius: 6px; width: 55px; 
-            text-align: center; font-weight: 700; transition: 0.2s; 
+            text-align: center; font-weight: 400; transition: 0.2s; 
         }
         input:focus { border-color: var(--accent-blue); outline: none; box-shadow: 0 0 8px rgba(88, 166, 255, 0.3); }
         input[type="text"] { width: 140px; color: var(--text-main); }
 
-        .btn-add { background: var(--success); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold; transition: 0.2s; }
+        .btn-add { background: var(--success); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 400; transition: 0.2s; }
         .btn-add:hover { opacity: 0.8; transform: translateY(-1px); }
         .btn-del { background: transparent; color: var(--danger); border: 1px solid var(--danger); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
         .btn-del:hover { background: var(--danger); color: white; }
@@ -55,8 +55,8 @@
         .req-line { position: absolute; bottom: 0; width: 100%; border-top: 3px solid var(--danger); z-index: 3; box-shadow: 0 -5px 15px rgba(218, 54, 51, 0.4); }
 
         .label-group { position: absolute; top: -50px; left: 50%; transform: translateX(-50%); text-align: center; width: 100%; z-index: 4; }
-        .wave-tag { font-size: 11px; font-weight: 800; color: #fff; margin-bottom: 4px; }
-        .risk-badge { font-size: 8px; padding: 1px 4px; border-radius: 4px; font-weight: bold; }
+        .wave-tag { font-size: 11px; font-weight: 400; color: #fff; margin-bottom: 4px; }
+        .risk-badge { font-size: 8px; padding: 1px 4px; border-radius: 4px; font-weight: 400; }
         .risk-low { background: var(--success); color: #fff; }
         .risk-high { background: var(--danger); color: #fff; animation: blink 1.5s infinite; }
 
@@ -67,7 +67,17 @@
         .stat-box { text-align: center; border-left: 1px solid var(--border); padding-left: 30px; }
         .stat-box:first-child { border: none; }
         .stat-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 2px; }
-        .stat-value { font-size: 22px; font-weight: 900; }
+        .stat-value { font-size: 22px; font-weight: 400; }
+
+        /* 가이드 통합 섹션 */
+        .guide-container { margin-top: 25px; padding-top: 20px; border-top: 1px dashed var(--border); }
+        .formula-list { list-style: none; padding: 0; margin: 0 0 20px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 10px; color: var(--text-dim); }
+        .formula-list li { background: rgba(255,255,255,0.02); padding: 8px; border-radius: 6px; border: 1px solid var(--border); }
+        .formula-list .formula-label { color: var(--accent-blue); }
+
+        .risk-guide { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
+        .guide-box { padding: 12px; border-radius: 8px; font-size: 11px; line-height: 1.6; border: 1px solid var(--border); }
+        .guide-box .guide-head { display: block; margin-bottom: 5px; font-size: 12px; }
 
         .footer-credit { text-align: right; margin-top: 15px; font-size: 10px; color: var(--text-dim); opacity: 0.6; font-style: italic; letter-spacing: 0.5px; }
     </style>
@@ -111,7 +121,7 @@
                             <td><input type="number" class="t-as" value="0.6" step="0.1" oninput="update()"></td>
                             <td><input type="number" class="t-cnt" value="1" oninput="update()"></td>
                             <td><input type="number" class="t-cost" value="100" oninput="update()"></td>
-                            <td class="row-dps" style="color:var(--accent-purple); font-weight:bold;">0</td>
+                            <td class="row-dps" style="color:var(--accent-purple);">0</td>
                             <td><button class="btn-del" onclick="this.closest('tr').remove(); update();">×</button></td>
                         </tr>
                     </tbody>
@@ -162,14 +172,27 @@
                 <div class="wave-timeline" id="wave-timeline"></div>
             </div>
 
-            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px dashed var(--border); font-size: 10px; color: var(--text-dim); line-height: 1.6;">
-                <div style="color: var(--accent-blue); font-weight: bold; margin-bottom: 5px; font-size: 11px;">[ 밸런스 산출 수식 가이드 ]</div>
-                <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                    <li>• <strong>타워 개별 DPS:</strong> (공격력 ÷ 공격속도) × 수량</li>
-                    <li>• <strong>사거리(Range):</strong> 타워가 적을 공격할 수 있는 물리적 반경 (Unity Unit 기준)</li>
-                    <li>• <strong>적 유닛 체류 시간:</strong> 전장(M) ÷ 이동속도(M/s)</li>
-                    <li>• <strong>웨이브 요구 DPS:</strong> (유닛 HP × 마릿수) ÷ 체류 시간</li>
+            <div class="guide-container">
+                <div style="color: var(--accent-blue); margin-bottom: 10px; font-size: 11px;">[ 밸런스 산출 수식 및 지표 가이드 ]</div>
+                
+                <ul class="formula-list">
+                    <li><span class="formula-label">• 타워 개별 DPS:</span> (공격력 ÷ 공격속도) × 수량</li>
+                    <li><span class="formula-label">• 적 유닛 체류 시간:</span> 전장(M) ÷ 이동속도(M/s)</li>
+                    <li><span class="formula-label">• 웨이브 요구 DPS:</span> (유닛 HP × 마릿수) ÷ 체류 시간</li>
+                    <li><span class="formula-label">• 가성비 지표:</span> 총 DPS ÷ 타워 투자비용</li>
                 </ul>
+
+                <div class="risk-guide">
+                    <div class="guide-box" style="border-left: 4px solid var(--danger); background: rgba(218, 54, 51, 0.05);">
+                        <span class="guide-head" style="color: var(--danger);">⚠️ 위협 (Threat Indicator)</span>
+                        보유 DPS가 적의 체력 성장을 하회하여 누수가 발생하는 구간입니다. 유닛 이동속도가 빠르거나 HP가 과도할 때 발생하며, 유저에게 타워 추가 설치 혹은 업그레이드를 강제하는 전략적 허들로 활용하십시오.
+                    </div>
+                    <div class="guide-box" style="border-left: 4px solid var(--success); background: rgba(35, 134, 54, 0.05);">
+                        <span class="guide-head" style="color: var(--success);">✅ 안정 (Stability Indicator)</span>
+                        타워의 화력이 웨이브 밀도를 완전히 제압하는 최적의 상태입니다. 여유 데미지가 너무 크면 유저가 지루함을 느낄 수 있으므로, 다음 웨이브의 난이도 상향 혹은 유닛 수 증가를 검토해야 하는 지점입니다.
+                    </div>
+                </div>
+
                 <div class="footer-credit">
                     System Architecture & Balance Logic Design by MOON SEO-YOON
                 </div>
@@ -244,17 +267,14 @@ function update() {
     waveData.forEach((data, i) => {
         const bar = document.createElement('div');
         const isFail = totalDps < data.req;
-        bar.className = 'wave-bar' + (isFail ? ' fail-spike' : '');
+        bar.className = 'wave-bar';
         
         const labelGroup = document.createElement('div');
         labelGroup.className = 'label-group';
         
-        const riskClass = isFail ? 'risk-high' : 'risk-low';
-        const riskText = isFail ? '위험' : '안정';
-        
         labelGroup.innerHTML = `
             <div class="wave-tag">W${i+1}</div>
-            <span class="risk-badge ${riskClass}">${riskText}</span>
+            <span class="risk-badge ${isFail ? 'risk-high' : 'risk-low'}">${isFail ? '위험' : '안정'}</span>
         `;
         bar.appendChild(labelGroup);
 
